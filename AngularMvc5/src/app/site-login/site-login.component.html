@@ -1,0 +1,41 @@
+
+<div class="card">
+	<div class="card-header">Site Login</div>
+	<div class="card-body">
+		<alert type="success">hello</alert>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header"><code>ngModel</code> property sets two-way data binding in this example</div>
+	  <div class="card-body">
+		<div class="col-xs-12 col-12 col-md-4 form-group">
+			<input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+		</div>
+		<div class="col-xs-12 col-12 col-md-3 form-group">
+			<button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen">Date Range Picker</button>
+		</div>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header">Progress Bar</div>
+	<div class="card-body">
+		<div class="mb-2">
+		  <progressbar [max]="max" [value]="dynamic">
+			<span class="text-nowrap">{{dynamic}} / {{max}}</span>
+		  </progressbar>
+		  <small><em>No animation</em></small>
+		</div>
+		<div class="mb-2">
+		  <progressbar [animate]="false" [value]="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+		  <small><em>Object (changes type based on value)</em></small>
+		</div>
+		<div class="mb-3">
+		  <progressbar class="progress-striped active" [value]="dynamic" [type]="type">{{type}}</progressbar>
+		</div>
+		<button type="button" class="btn btn-sm btn-primary" (click)="random()">Randomize</button>
+	</div>
+</div>
+
+

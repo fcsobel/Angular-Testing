@@ -1,0 +1,27 @@
+{
+	"compileOnSave": false,
+	// Use include to compile TypeScript from /src folder instead of entire project structure.
+	"include": [ "./src" ],
+	"compilerOptions": {
+		"baseUrl": "./",
+		// Placing all transpiled files with source maps in /scripts/out-tsc
+		"outDir": "./scripts/out-tsc",
+		//"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"module": "es2015",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		//"target": "es5",
+		"target": "es2015", // https://angular.io/guide/elements#browser-support-for-custom-elements
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"lib": [
+			"es2018",
+			"dom"
+		]
+	}
+}
