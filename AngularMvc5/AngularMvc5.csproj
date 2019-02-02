@@ -105,6 +105,7 @@
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\chart-example1\chart-example1.component.html" />
     <Content Include="src\app\gitrepos\gitrepos.component.html" />
+    <Content Include="src\app\map-test\map-test.component.html" />
     <Content Include="src\app\site-login\site-login.component.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
@@ -138,11 +139,13 @@
     <Content Include="Scripts\libs\styles.js.map" />
     <Content Include="Scripts\libs\vendor.js.map" />
     <Content Include="src\app\gitrepos\gitrepos.component.less" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="src\app\site-login\site-login.component.less" />
     <Content Include="README.md" />
     <Content Include="src\app\chart-example1\chart-example1.component.less" />
+    <Content Include="Views\Home\Charts.cshtml" />
+    <Content Include="Views\Home\Maps.cshtml" />
+    <Content Include="src\app\map-test\map-test.component.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,6 +169,8 @@
     <TypeScriptCompile Include="src\app\github.service.ts" />
     <TypeScriptCompile Include="src\app\gitrepos\gitrepos.component.spec.ts" />
     <TypeScriptCompile Include="src\app\gitrepos\gitrepos.component.ts" />
+    <TypeScriptCompile Include="src\app\map-test\map-test.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\map-test\map-test.component.ts" />
     <TypeScriptCompile Include="src\app\site-login2\site-login2.component.spec.ts" />
     <TypeScriptCompile Include="src\app\site-login2\site-login2.component.ts" />
     <TypeScriptCompile Include="src\app\site-login\site-login.component.spec.ts" />

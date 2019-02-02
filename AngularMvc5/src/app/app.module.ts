@@ -13,14 +13,17 @@ import { ProgressbarModule } from 'ngx-bootstrap';
 import { FormsModule } from '@angular/forms';  //<<<< import it here
 import { ChartsModule } from 'ng2-charts';
 import { ChartExample1Component } from './chart-example1/chart-example1.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MapTestComponent } from './map-test/map-test.component';
 
 @NgModule({
-	declarations: [AppComponent, GitreposComponent, SiteLoginComponent, SiteLogin2Component, ChartExample1Component], 
-	imports: [BrowserModule, HttpClientModule, ChartsModule, AlertModule.forRoot(), BsDatepickerModule.forRoot(), ProgressbarModule.forRoot(), FormsModule ],
+	declarations: [AppComponent, GitreposComponent, SiteLoginComponent, SiteLogin2Component, ChartExample1Component, MapTestComponent, MapTestComponent], 
+	imports: [BrowserModule, HttpClientModule, ChartsModule, LeafletModule.forRoot(), AlertModule.forRoot(), BsDatepickerModule.forRoot(), ProgressbarModule.forRoot(), FormsModule ],
 	providers: [],
 	bootstrap: [], // bootstrapped root component 
 	// https://scotch.io/tutorials/build-a-reusable-component-with-angular-elements
-	entryComponents: [GitreposComponent, SiteLoginComponent, SiteLogin2Component, ChartExample1Component],  // This tells Angular that rather than bootstrapping an Angular application from AppComponent, you're going to compile it and package it up to use as a Web Component. 
+	// This tells Angular that rather than bootstrapping an Angular application from AppComponent, you're going to compile it and package it up to use as a Web Component. 
+	entryComponents: [GitreposComponent, SiteLoginComponent, SiteLogin2Component, ChartExample1Component, MapTestComponent], 
 	//exports: [GitreposComponent] // allows controls to be added anywhere
 
 })
@@ -68,5 +71,8 @@ export class AppModule {
 
 		const customElement4 = createCustomElement(ChartExample1Component, { injector: this.injector });
 		customElements.define('app-chart-example1', customElement4);
+
+		const customElement5 = createCustomElement(MapTestComponent, { injector: this.injector });
+		customElements.define('app-map-test', customElement5);
 	}
 }

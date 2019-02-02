@@ -639,9 +639,9 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Projects\Test\Trunk\Angular\ngGitHouse\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! C:\Projects\Test\Trunk\Angular\ngGitHouse\node_modules\ngx-bootstrap\datepicker\bs-datepicker.css */"./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css");
-module.exports = __webpack_require__(/*! C:\Projects\Test\Trunk\Angular\ngGitHouse\src\styles.less */"./src/styles.less");
+__webpack_require__(/*! C:\Projects\Github\Test\Angular\AngularMvc5\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! C:\Projects\Github\Test\Angular\AngularMvc5\node_modules\ngx-bootstrap\datepicker\bs-datepicker.css */"./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css");
+module.exports = __webpack_require__(/*! C:\Projects\Github\Test\Angular\AngularMvc5\src\styles.less */"./src/styles.less");
 
 
 /***/ })

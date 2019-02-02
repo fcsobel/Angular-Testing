@@ -387,6 +387,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/index.js");
 /* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(ng2_charts__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./chart-example1/chart-example1.component */ "./src/app/chart-example1/chart-example1.component.ts");
+/* harmony import */ var _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @asymmetrik/ngx-leaflet */ "./node_modules/@asymmetrik/ngx-leaflet/dist/index.js");
+/* harmony import */ var _map_test_map_test_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./map-test/map-test.component */ "./src/app/map-test/map-test.component.ts");
 
 
 // The injector will be used to create new instances of the component that live independent of one another.
@@ -401,6 +403,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
  //<<<< import it here
+
+
 
 
 let AppModule = class AppModule {
@@ -438,16 +442,19 @@ let AppModule = class AppModule {
         customElements.define('app-site-login2', customElement3);
         const customElement4 = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_3__["createCustomElement"])(_chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__["ChartExample1Component"], { injector: this.injector });
         customElements.define('app-chart-example1', customElement4);
+        const customElement5 = Object(_angular_elements__WEBPACK_IMPORTED_MODULE_3__["createCustomElement"])(_map_test_map_test_component__WEBPACK_IMPORTED_MODULE_14__["MapTestComponent"], { injector: this.injector });
+        customElements.define('app-map-test', customElement5);
     }
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_6__["GitreposComponent"], _site_login_site_login_component__WEBPACK_IMPORTED_MODULE_7__["SiteLoginComponent"], _site_login2_site_login2_component__WEBPACK_IMPORTED_MODULE_8__["SiteLogin2Component"], _chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__["ChartExample1Component"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_11__["ChartsModule"], ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["AlertModule"].forRoot(), ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["BsDatepickerModule"].forRoot(), ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["ProgressbarModule"].forRoot(), _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_6__["GitreposComponent"], _site_login_site_login_component__WEBPACK_IMPORTED_MODULE_7__["SiteLoginComponent"], _site_login2_site_login2_component__WEBPACK_IMPORTED_MODULE_8__["SiteLogin2Component"], _chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__["ChartExample1Component"], _map_test_map_test_component__WEBPACK_IMPORTED_MODULE_14__["MapTestComponent"], _map_test_map_test_component__WEBPACK_IMPORTED_MODULE_14__["MapTestComponent"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_11__["ChartsModule"], _asymmetrik_ngx_leaflet__WEBPACK_IMPORTED_MODULE_13__["LeafletModule"].forRoot(), ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["AlertModule"].forRoot(), ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["BsDatepickerModule"].forRoot(), ngx_bootstrap__WEBPACK_IMPORTED_MODULE_9__["ProgressbarModule"].forRoot(), _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"]],
         providers: [],
         bootstrap: [],
         // https://scotch.io/tutorials/build-a-reusable-component-with-angular-elements
-        entryComponents: [_gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_6__["GitreposComponent"], _site_login_site_login_component__WEBPACK_IMPORTED_MODULE_7__["SiteLoginComponent"], _site_login2_site_login2_component__WEBPACK_IMPORTED_MODULE_8__["SiteLogin2Component"], _chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__["ChartExample1Component"]],
+        // This tells Angular that rather than bootstrapping an Angular application from AppComponent, you're going to compile it and package it up to use as a Web Component. 
+        entryComponents: [_gitrepos_gitrepos_component__WEBPACK_IMPORTED_MODULE_6__["GitreposComponent"], _site_login_site_login_component__WEBPACK_IMPORTED_MODULE_7__["SiteLoginComponent"], _site_login2_site_login2_component__WEBPACK_IMPORTED_MODULE_8__["SiteLogin2Component"], _chart_example1_chart_example1_component__WEBPACK_IMPORTED_MODULE_12__["ChartExample1Component"], _map_test_map_test_component__WEBPACK_IMPORTED_MODULE_14__["MapTestComponent"]],
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injector"]])
 ], AppModule);
@@ -655,6 +662,73 @@ GitreposComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/map-test/map-test.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/map-test/map-test.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"map\"\r\n     leaflet \r\n     [leafletOptions]=\"options\">\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/map-test/map-test.component.less":
+/*!**************************************************!*\
+  !*** ./src/app/map-test/map-test.component.less ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".map {\n  height: 100%;\n  padding: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFwLXRlc3QvQzovUHJvamVjdHMvR2l0aHViL1Rlc3QvQW5ndWxhci9Bbmd1bGFyTXZjNS9zcmMvYXBwL21hcC10ZXN0L21hcC10ZXN0LmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9tYXAtdGVzdC9tYXAtdGVzdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLFlBQUE7RUFDQSxVQUFBO0FDQ0QiLCJmaWxlIjoic3JjL2FwcC9tYXAtdGVzdC9tYXAtdGVzdC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXAge1xuXHRoZWlnaHQ6IDEwMCU7XG5cdHBhZGRpbmc6IDA7XG59XG4iLCIubWFwIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwYWRkaW5nOiAwO1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/map-test/map-test.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/map-test/map-test.component.ts ***!
+  \************************************************/
+/*! exports provided: MapTestComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapTestComponent", function() { return MapTestComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+let MapTestComponent = class MapTestComponent {
+    constructor() {
+        this.options = {
+            layers: [
+                Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["tileLayer"])('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                })
+            ],
+            zoom: 7,
+            center: Object(leaflet__WEBPACK_IMPORTED_MODULE_2__["latLng"])([46.879966, -121.726909])
+        };
+    }
+    ngOnInit() {
+    }
+};
+MapTestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-map-test',
+        template: __webpack_require__(/*! ./map-test.component.html */ "./src/app/map-test/map-test.component.html"),
+        styles: [__webpack_require__(/*! ./map-test.component.less */ "./src/app/map-test/map-test.component.less")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], MapTestComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/site-login/site-login.component.html":
 /*!******************************************************!*\
   !*** ./src/app/site-login/site-login.component.html ***!
@@ -834,7 +908,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Projects\Test\Trunk\Angular\ngGitHouse\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Projects\Github\Test\Angular\AngularMvc5\src\main.ts */"./src/main.ts");
 
 
 /***/ })

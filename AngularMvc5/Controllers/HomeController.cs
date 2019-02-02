@@ -14,7 +14,12 @@ namespace ngGitHouse.Controllers
             return View();
         }
 
-		public ActionResult Contact()
+		public ActionResult Charts()
+		{
+			return View();
+		}
+
+		public ActionResult Maps()
 		{
 			return View();
 		}
